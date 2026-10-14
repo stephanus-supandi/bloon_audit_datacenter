@@ -9,12 +9,12 @@
     "evidence_ids": ["EVID-001"],
     "source_url": "https://dci-indonesia.com/data-centers",
     "source_document": "DCI Indonesia data centers page; facility-specific applicability not established",
-    "source_date": "2026-10-14",
+    "source_date": null,
     "observation_date": "2026-10-14",
     "verification_status": "unverified",
     "severity": "undetermined",
     "confidence": 0.1,
-    "limitations": "Research scaffold only. Access date is recorded for this fixture; no claim is made that the page was archived or independently authenticated. Confirm current page content and the exact facility before relying on it.",
+    "limitations": "Research scaffold only. The source publication date is unknown and is represented as null; access date is recorded separately in the evidence registry. The page has not been archived or independently authenticated. Confirm current page content and the exact facility before relying on it.",
     "reviewer_notes": "Missing Information ≠ Technical Failure. A public-search gap is not proof of a missing permit or regulatory breach."
   }
 ]
