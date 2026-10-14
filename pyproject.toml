@@ -7,7 +7,7 @@ name = "bloon-audit-datacenter"
 version = "0.1.1"
 description = "Evidence-based preliminary screening for data-center project documentation"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = {text = "BLOON UNIVERSITY"}
 
 [project.optional-dependencies]
 test = ["pytest>=7"]
