@@ -1,0 +1,12 @@
+[
+  {
+    "evidence_id": "EVID-001",
+    "title": "DCI Indonesia data centers page",
+    "issuing_org": "DCI Indonesia",
+    "url": "https://dci-indonesia.com/data-centers",
+    "access_date": "2026-10-14",
+    "is_verifiable": true,
+    "establishes": "The issuer publicly describes its data-center portfolio on this page.",
+    "unknowns": "This page alone does not establish facility-specific AMDAL status, structural design, UPS topology, cooling-water consumption, PUE, or regulatory compliance. The exact target facility for this study remains unresolved."
+  }
+]
