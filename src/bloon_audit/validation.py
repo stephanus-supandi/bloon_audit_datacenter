@@ -89,7 +89,7 @@ def validate_finding(record, index, evidence_registry):
         if field not in record:
             raise ValidationError(f"{prefix}: Missing required field '{field}'")
         value = record[field]
-        if value is None:
+        if value is None and field != "source_date":
             raise ValidationError(f"{prefix}: Field '{field}' cannot be null")
         if isinstance(value, str) and not value.strip() and field not in {"limitations", "reviewer_notes"}:
             raise ValidationError(f"{prefix}: Field '{field}' cannot be empty")
@@ -107,6 +107,7 @@ def validate_finding(record, index, evidence_registry):
         if eid not in evidence_registry:
             raise ValidationError(f"{prefix}: Unknown evidence_id {eid!r}")
     validate_confidence(record["confidence"], prefix)
-    validate_iso_date(record["source_date"], "source_date", prefix)
+    if record["source_date"] is not None:
+        validate_iso_date(record["source_date"], "source_date", prefix)
     validate_iso_date(record["observation_date"], "observation_date", prefix)
     validate_url(record["source_url"], "source_url", prefix)
