@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["evidence_id", "title", "issuing_org", "url", "access_date", "is_verifiable", "establishes", "unknowns"],
+  "properties": {
+    "evidence_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "issuing_org": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "format": "uri"},
+    "access_date": {"type": "string", "format": "date"},
+    "is_verifiable": {"type": "boolean"},
+    "establishes": {"type": "string", "minLength": 1},
+    "unknowns": {"type": "string"}
+  },
+  "additionalProperties": false
+}
