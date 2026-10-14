@@ -12,7 +12,7 @@
     "evidence_ids": {"type": "array", "items": {"type": "string"}},
     "source_url": {"type": "string", "format": "uri"},
     "source_document": {"type": "string", "minLength": 1},
-    "source_date": {"type": "string", "format": "date"},
+    "source_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
     "observation_date": {"type": "string", "format": "date"},
     "verification_status": {"enum": ["verified", "partially_verified", "unverified", "not_applicable", "conflicting_evidence"]},
     "severity": {"enum": ["critical", "high", "medium", "low", "undetermined"]},
