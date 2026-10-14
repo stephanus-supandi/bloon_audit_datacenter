@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["finding_id", "project_id", "domain", "category", "requirement", "observation", "evidence_ids", "source_url", "source_document", "source_date", "observation_date", "verification_status", "severity", "confidence", "limitations", "reviewer_notes"],
+  "properties": {
+    "finding_id": {"type": "string", "minLength": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "domain": {"enum": ["civil", "environmental", "electrical", "mechanical", "it", "regulatory"]},
+    "category": {"type": "string", "minLength": 1},
+    "requirement": {"type": "string", "minLength": 1},
+    "observation": {"type": "string", "minLength": 1},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "source_url": {"type": "string", "format": "uri"},
+    "source_document": {"type": "string", "minLength": 1},
+    "source_date": {"type": "string", "format": "date"},
+    "observation_date": {"type": "string", "format": "date"},
+    "verification_status": {"enum": ["verified", "partially_verified", "unverified", "not_applicable", "conflicting_evidence"]},
+    "severity": {"enum": ["critical", "high", "medium", "low", "undetermined"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "limitations": {"type": "string"},
+    "reviewer_notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
