@@ -7,7 +7,7 @@
 - `domain`: `civil`, `environmental`, `electrical`, `mechanical`, `it`, or `regulatory`.
 - `category`, `requirement`, `observation`: concise finding metadata.
 - `evidence_ids`: list of registered evidence IDs.
-- `source_url`, `source_document`, `source_date`: primary reference metadata; do not guess source dates.
+- `source_url`, `source_document`, `source_date`: primary reference metadata. `source_date` may be `null` when the publication/source date is unknown; do not substitute an invented date. Keep retrieval date in the evidence registry’s `access_date`.
 - `observation_date`: date the analyst recorded the observation.
 - `verification_status`: `verified`, `partially_verified`, `unverified`, `not_applicable`, or `conflicting_evidence`.
 - `severity`: `critical`, `high`, `medium`, `low`, or `undetermined`.
