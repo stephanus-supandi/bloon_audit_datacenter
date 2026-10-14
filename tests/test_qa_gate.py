@@ -78,3 +78,8 @@ def test_iso_date_rejects_suffix_and_impossible_date():
     for date in ("2024-01-01junk", "2023-02-30"):
         finding = VALID_FINDING.copy(); finding["source_date"] = date
         with pytest.raises(ValidationError): validate_finding(finding, 0, {"E1": VALID_EVIDENCE})
+
+
+def test_unknown_source_publication_date_can_be_null():
+    finding = VALID_FINDING.copy(); finding["source_date"] = None
+    validate_finding(finding, 0, {"E1": VALID_EVIDENCE})
