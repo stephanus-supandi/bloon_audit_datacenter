@@ -102,7 +102,7 @@ def generate_report(findings, output_path, timestamp=None, evidence_registry=Non
                 ("severity", "Severity"), ("confidence", "Confidence"), ("source_document", "Source Document"),
                 ("source_url", "Source URL"), ("source_date", "Source Date"), ("observation_date", "Observation Date"),
                 ("limitations", "Limitations"), ("reviewer_notes", "Reviewer Notes")]:
-                out.write(f"- **{label}:** {_md(finding.get(field, 'N/A'))}\n")
+                out.write(f"- **{label}:** {_md(finding.get(field) if finding.get(field) is not None else 'N/A')}\n")
             out.write(f"- **Evidence refs:** {_md(', '.join(finding.get('evidence_ids', [])))}\n")
             for eid in finding.get("evidence_ids", []):
                 evidence = (evidence_registry or {}).get(eid, {})
